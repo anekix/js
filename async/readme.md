@@ -97,9 +97,9 @@ async function asyncFunc() {
 
 Things to keep in mind while using async/await:
 
-Async functions return a promise.
-Await can only be used inside an async block.
-Await waits until the function("promise") resolves or rejects.
+* Async functions return a promise.
+* Await can only be used inside an async block.
+* Await waits until the function("promise") resolves or rejects.
 
   
 
