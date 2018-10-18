@@ -59,9 +59,30 @@ async function asyncFunc() {
   return 'hey i got my results'
 }
 ```
-The `await` statement will pause the execution of the async function & wait until the data comes in /is resolved for the first async funtion( & then for other async funcitons used with await statement)
+The `await` statement will pause the execution of the async function & wait until the data comes in /is resolved for the first async funtion( & then for other async funcitons used with await statement).
 
- 
+***Await is simply a more elegant way to write a promise within an async function. It improves readability immensely and hence the reason we use it***
+
+
+
+## Error Handling in async await
+
+**await** provides clean way to do error handling using the good old **try/catch** statements. Ex;
+```js
+async function asyncFunc() {
+  try {
+  
+    // fetch data from a url endpoint
+    const data = await axios.get("/some_url_endpoint");
+    return data;
+    
+     } catch(error) {
+  
+    console.log("error", error);
+    // appropriately handle the error
+  }
+}
+```
   
 
 
