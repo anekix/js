@@ -83,6 +83,24 @@ async function asyncFunc() {
   }
 }
 ```
+
+## await  Promise.all()
+```js
+async function asyncFunc() {
+  const response = await Promise.all([
+    axios.get("/some_url_endpoint"),
+    axios.get("/some_url_endpoint")
+  ]);
+  ...
+}
+```
+
+Things to keep in mind while using async/await:
+
+Async functions return a promise.
+Await can only be used inside an async block.
+Await waits until the function("promise") resolves or rejects.
+
   
 
 
