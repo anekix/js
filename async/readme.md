@@ -27,7 +27,7 @@ async asyncFetchFromDB(){
 }
 ```
 
-now we want to call method `asyncFetchFromDB` only after the function `asyncFunction` has been called & resolved. so to di that we can use chaining of `.then()` like this
+now we want to call method `asyncFetchFromDB` only after the function `asyncFunction` has been called & resolved. so to do that we can use chaining of `.then()` like this
 
 ```js
 asyncFuntion().then(result =>{
@@ -41,6 +41,25 @@ asyncFuntion().then(result =>{
  // hey i am an async function
  // fetching  results from the db
  ```
+We can see that the above syntax gets cumbersome pretty quickly so we should have something better..
+
+## Enter await statement
+consider this example below:
+
+```js
+
+async function asyncFunc() {
+
+  const data = await asyncFunction()
+  console.log(data)
+  
+  const data2 = await asyncFetchFromDB()
+  console.log(data2)
+  
+  return 'hey i got my results'
+}
+```
+The `await` statement will pause the execution of the async function & wait until the data comes in /is resolved for the first async funtion( & then for other async funcitons used with await statement)
 
  
   
