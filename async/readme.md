@@ -104,4 +104,39 @@ Things to keep in mind while using async/await:
   
 
 
+## chaining promises
+
+We know that we can use `.then()` method on a promise to get its resolved value. now think it like this to be able to chain `.then()` , a call to `.then()` should itself return a **Promise object**.
+lets verify this:
+```
+var p = new Promise( function(resolve, reject){
+              setTimeout( function(){
+                    resolve('foo')
+                    }
+         })
+```
+
+
+now let call `.then()` on this promise
+```
+p.then( function(result){
+    console.log(result)
+}
+```
+if we store the value of the above call we get `Promise {<resolved>: undefined}`. now since the return type is salready a promise we can call another `.then()` on it like this:
+
+
+```js
+p.then( function(result){
+    console.log(result)
+    return result 
+ }.then( function(result){
+ 
+    console.log(result*2)
+
+    return result* 2
+ }.then( function(result){
+    console.log(result*3)
+ }
+```
 
