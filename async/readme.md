@@ -128,15 +128,12 @@ if we store the value of the above call we get `Promise {<resolved>: undefined}
 
 ```js
 p.then( function(result){
-    console.log(result)
-    return result 
- }.then( function(result){
- 
-    console.log(result*2)
-
+	alert (result)
+    return 2 
+ }).then( function(result){
+	 alert(result)
     return result* 2
- }.then( function(result){
-    console.log(result*3)
- }
+ }).then( function(result){
+ })
 ```
 
