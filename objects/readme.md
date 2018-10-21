@@ -17,7 +17,7 @@ user.address = 'kentucky'
 ```
 
 
-## how to get multiple instances of the object 
+## how to get multiple instances of the object with same flavour
 
 ```js
 function createUser(name, age , address){
@@ -29,8 +29,20 @@ function createUser(name, age , address){
 
 }
 
-var u1 = new createUser('rachel',20,'kentucky')
-var u2 = new createUser('sam',21,'NYC')
+var u1 = createUser('rachel',20,'kentucky')
+var u2 = createUser('sam',21,'NYC')
+```
+
+## using function constructor
+```js
+function User(name, age){
+  this.name = name
+  this.age = age
+}
+
+var u1 = new User('rachel',20)
+var u2 = new User('sam',21)
+
 ```
 
 
