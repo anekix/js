@@ -57,5 +57,27 @@ class User  {
 var e = new User("hello");
 ```
 
+## prototype
+
+All JavaScript objects inherit properties and methods from a prototype.
+
+our `User`  object inherits properties from `User.prototype`.The `Object.prototype` is on the top of the prototype inheritance chain:
+
+## Adding new properties/methodds to the existing function constructor
+
+```js
+class User  {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+User.prototype.address = 'kolkata';
+
+var e = new User("hello");
+console.log(e.address)
+```
+
+
 
 
