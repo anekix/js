@@ -45,6 +45,17 @@ var u2 = new User('sam',21)
 
 ```
 
+## using ES6 class syntax
+
+```js
+class User  {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+var e = new User("hello");
+```
 
 
 
